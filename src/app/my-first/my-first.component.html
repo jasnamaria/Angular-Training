@@ -1,0 +1,121 @@
+<div class="form-container">
+        <h1 [style]= "{'color': colorname}">Employee Registration Form</h1>
+</div>
+ <form > 
+      <div class="form-container">
+  <form (ngSubmit)="handleRegForm()" [formGroup]="formModel">  
+    <div class="form-group">
+      <label for="firstName" [class]="blueClass">First Name:</label>
+      <input id="firstName" type="text" formControlName="firstName"/>
+      <div *ngIf="formModel.get('firstName')?.invalid && formModel.get('firstName')?.touched" class="text-danger">
+        <p>FirstName is Required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" type="text" formControlName="lastName"/>
+      <div *ngIf="formModel.get('lastName')?.invalid && formModel.get('lastName')?.touched" class="text-danger">
+        <p>lastName is Required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="password" type="password" formControlName="password"/>
+        <div *ngIf="formModel.get('password')?.invalid && formModel.get('password')?.touched" class="text-danger">
+        <p>Password is Required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input id="phone" type="tel" formControlName="phone"/>
+        <div *ngIf="formModel.get('phone')?.invalid && formModel.get('phone')?.touched" class="text-danger">
+        <p>PhoneNo is Required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email ID:</label>
+      <input id="email" type="email" formControlName="email"/>
+      <div *ngIf="formModel.get('email')?.invalid && formModel.get('email')?.touched" class="text-danger">
+        <p>Email is Required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" formControlName="gender" value="Male" /> Male</label>
+        <label><input type="radio" formControlName="gender" value="Female" /> Female </label>
+         <div *ngIf="formModel.get('gender')?.invalid && formModel.get('gender')?.touched" class="text-danger">
+         <p>Gender is Required</p>
+         </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Skills:</label>
+      <div class="checkbox-group">
+     <label><input type="checkbox" formControlName="skills"/> Angular</label>
+        <label><input type="checkbox" formControlName="skills"/> React</label>
+        <label><input type="checkbox" formControlName="skills"/> .Net</label>
+        <div *ngIf="formModel.get('skills')?.invalid && formModel.get('skills')?.touched" class="text-danger">
+        <p>Skills is Required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="department">Department:</label>
+      <select id="department" formControlName="department">
+        <option>Select Any</option>
+        <option>IT</option>
+        <option>HR</option>
+        <option>Finance</option>
+     </select>
+
+        <div *ngIf="formModel.get('department')?.invalid && formModel.get('department')?.touched" class="text-danger">
+        <p>Department is Required</p>
+        </div>
+
+    </div>
+
+    <div class="form-button">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+
+ </form>
+
+ <button class="btn btn-primary" [disabled]="isdisabled" (click)="openPopup()">View Employee Details</button>
+
+<div class="modal-backdrop" *ngIf="showModal">
+  <div class="custom-modal">
+    <h4>Employee Registered Details....</h4>
+    <p><strong>Name: </strong> {{submittedData.firstName + '' + submittedData.lastName}}</p>
+    <p><strong>Phone Number : </strong> {{submittedData.phone}}</p>
+    <p><strong>Email Id: </strong>{{submittedData.email}}</p>
+    <p><strong>Gender: </strong>{{submittedData.gender}}</p>
+    <p><strong>Skills: </strong>{{submittedData.skills}}</p>
+    <p><strong>Department: </strong>{{submittedData.department}}</p>
+    <p></p>
+    <button class="btn btn-danger" (click)="closePopup()">Close</button>
+  </div>
+</div>
+
+
+<!-- for new component create : cd src/app
+1) ng g c my-first
+2) selector name: app-my-first check
+3) app.module.ts give the new component selector name.
+4) automatically app.module.ts 
+        imports MyFirstComponent
+        declartion array have MyFirstComponent
+5) declartion -- for new component
+6) import array -- for routing,template driven form,reactive form.        -->
+
+
