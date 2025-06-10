@@ -7,11 +7,12 @@ import { Error404Component } from './pages/error-404/error-404.component';
 import { UserInfoComponent } from './pages/user-info/user-info.component';
 
 const routes: Routes = [
-   { path: '', component: HomeComponent},
+   { path: '', component: HomeComponent},  //default routing -- home
    { path: 'about', component: AboutComponent},
    { path: 'contact', component: ContactComponent},
-   { path: 'user/:id', component: UserInfoComponent},
-   { path: '**', component: Error404Component}
+   { path: 'user/:id', component: UserInfoComponent}, // parameter passing in routing
+   { path: 'about/:id/:name/:age', component: AboutComponent},
+   { path: '**', component: Error404Component} // error page
 ];
 
 @NgModule({

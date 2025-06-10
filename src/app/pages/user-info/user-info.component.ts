@@ -11,7 +11,6 @@ export class UserInfoComponent {
   id = 0;
 
   constructor(private route:ActivatedRoute){
-    this.id=route.snapshot.params['id'];
-   
+    this.id=route.snapshot.params['id'];   // route parameter.
   }
 }
