@@ -1,0 +1,23 @@
+header{
+    background-color: #000000;
+    display:flex;
+    height: 65px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav{
+    display: flex;
+    gap: 10px;
+}
+
+a{
+    color: #ffffff;
+}
+
+.logo{
+    color: #ffffff;
+    font-family: cursive;
+    font-size: 1.2rem;
+}

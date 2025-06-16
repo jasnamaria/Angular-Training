@@ -1,0 +1,103 @@
+.container {
+
+/* FLEX-- CONCEPTS START*/
+
+
+    color: rgb(255, 0, 0);
+   /* 1)display -- the content hr */
+    display: flex; 
+    /* 2)flex-direction -- column or row wise */
+    /* flex-direction: column; */
+    /* flex-direction: row; */
+    /* 3) justify-content -- our items will be pushed to the start/end/center of the main axis. */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center;  */
+    /* 4) justy content --space distribute the items in between the first and last item. */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    /* justify-content: space-evenly; */
+    /* 5) align item -- top/bottom/center */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    align-items: center;
+    /* align-items: baseline; */
+    /* 6) wrap now our items are no longer trying to fit into one line */
+    flex-wrap: wrap;
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+     /* align-content: center;
+     align-content: space-between; */
+     /* align-content: space-around; */
+     /* align-content: space-evenly; */
+     /* 7) provide a gap between the content */
+     /* gap: 1em; */
+     min-height: 500px;
+    /* background: #f0f0f0; */
+
+  
+}
+
+/* flex grow */
+/* 
+.item-1 {
+    flex-grow: 1;
+} */
+
+/* .item-1,
+.item-2,
+.item-3{
+    flex-grow: 1;
+} */
+
+.item-1 {
+  /* Flex-grow */
+  /* flex-grow: 1; */ 
+  /* Flex-shrink */
+  /* flex-shrink: 0; */
+  /* flex-basis: 0; */
+   /* flex: 1; */
+  /* align-self: baseLine;  */
+  /* align-self: flex-start; */
+  align-self: center;
+  /* we can change our order first in the last one set */
+  /* order: 1; */
+}
+
+
+/* we can change our order first in the order  */
+/* .item-3 {
+  order: -1;
+} */
+
+.box{
+    /* height: 100px; */
+    /* width: 100px; */
+    background-color: #0071FF;
+    /* font-size: 30pt; */
+}
+
+ /* body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.tile-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; 
+} */
+
+
+.tile {
+  width: 300px;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  background: #f9f9f9;
+  margin: 20px auto;
+}
+
+/* FLEX CONCEPTS END */

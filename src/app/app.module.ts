@@ -11,6 +11,9 @@ import { Error404Component } from './pages/error-404/error-404.component';
 import { UserInfoComponent } from './pages/user-info/user-info.component';
 import { NavbarComponent } from './common/components/navbar/navbar.component';
 import { FooterComponent } from './common/components/footer/footer.component';
+import { DetailnavbarComponent } from './common/components/detailnavbar/detailnavbar.component';
+import { FlexComponent } from './common/components/flex/flex.component';
+import { GridComponent } from './common/components/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FooterComponent } from './common/components/footer/footer.component';
     Error404Component,
     UserInfoComponent,
     NavbarComponent,
-    FooterComponent,  
+    FooterComponent,
+    DetailnavbarComponent,
+    FlexComponent,
+    GridComponent,  
   ],
   imports: [
     BrowserModule,
